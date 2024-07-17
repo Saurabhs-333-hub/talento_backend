@@ -1,14 +1,11 @@
 import express from 'express';
+import router from './routes/routes.js';
 
 const app = express();
 
-app.get('/', (req, res) => {
-    res.json('Hello World');
-});
+app.use(express.json());
+app.use(router);
 
-app.post('/', (req, res) => {
-    res.json('Hello World POST');
-});
 
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
