@@ -6,8 +6,8 @@ app.get('/', (req, res) => {
     res.json('Hello World');
 });
 
-app.get('/server/:id', (req, res) => {
-    res.json(req.params);
+app.post('/', (req, res) => {
+    res.json('Hello World POST');
 });
 
 app.listen(3000, () => {
