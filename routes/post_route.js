@@ -1,6 +1,6 @@
 import { Router } from "express";
-import AppwriteConfig from '../appwrite_config.ts'
-import AppwriteConstants from "../appwrite_constants.ts";
+import AppwriteConfig from '../appwrite_config.js'
+import AppwriteConstants from "../appwrite_constants.js";
 const router = Router();
 
 router.get('/', async (req, res) => {

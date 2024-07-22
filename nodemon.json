@@ -1,7 +1,0 @@
-{
-    "watch": [
-        "**/*.js, **/*.ts"
-    ],
-    "exec": "ts-node --esm index.js",
-    "ext": "js"
-}

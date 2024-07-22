@@ -1,5 +1,5 @@
 import {Account, Client, Databases, Functions, Storage} from 'node-appwrite'
-import AppwriteConstants from './appwrite_constants.ts'
+import AppwriteConstants from './appwrite_constants.js'
 
     const client= new Client().setEndpoint(AppwriteConstants.appwriteUrl).setProject(AppwriteConstants.projectId);
     const account = new Account(client);

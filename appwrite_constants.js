@@ -38,10 +38,10 @@ class AppwriteConstants {
 
     static placeholderDeafultImageId = '65be6276d0f1ce53eb4e';
     static placeholderDeafultImageUrl = 'https://images.unsplash.com/photo-1540324155974-7523202daa3f?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-    static imageUrl = (imageId: string) =>
+    static imageUrl = (imageId) =>
         `${this.appwriteUrl}/storage/buckets/${this.bucketIdImages}/files/${imageId}/view?project=${this.projectId}&mode=admin`;
 
-    static videoUrl = (videoId: string) =>
+    static videoUrl = (videoId) =>
         `${this.appwriteUrl}/storage/buckets/${this.bucketIdVideos}/files/${videoId}/view?project=${this.projectId}&mode=admin`;
 
 }
