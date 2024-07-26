@@ -31,6 +31,16 @@ router.post('/', async (req, res) => {
     res.json(post);
 });
 
+router.post('/:id/addComment', async (req, res) => {
+    const post = await AppwriteConfig.database.createDocument(
+        AppwriteConstants.databaseId,
+        AppwriteConstants.collectionIdComments,
+        req.params.id,
+        req.body
+    );
+    res.json(post);
+});
+
 
 
 export default router;
