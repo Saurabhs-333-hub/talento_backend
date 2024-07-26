@@ -13,12 +13,6 @@ router.post('/', (req, res) => {
 
 
 
-router.get('/glimpses', async (req, res) => {
-    const glimpses = await AppwriteConfig.database.listDocuments(
-        AppwriteConstants.databaseId,
-        AppwriteConstants.collectionIdGlimpses,
-    );
-    res.json(glimpses);
-});
+
 
 export default router;

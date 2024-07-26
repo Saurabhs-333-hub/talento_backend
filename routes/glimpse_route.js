@@ -5,17 +5,17 @@ import {ID} from "node-appwrite";
 const router = Router();
 
 router.get('/', async (req, res) => {
-    const posts = await AppwriteConfig.database.listDocuments(
+    const glimpses = await AppwriteConfig.database.listDocuments(
         AppwriteConstants.databaseId,
-        AppwriteConstants.collectionIdPosts,
+        AppwriteConstants.collectionIdGlimpses,
     );
-    res.json(posts);
+    res.json(glimpses);
 });
 
 router.get('/:id', async (req, res) => {
     const post = await AppwriteConfig.database.getDocument(
         AppwriteConstants.databaseId,
-        AppwriteConstants.collectionIdPosts,
+        AppwriteConstants.collectionIdGlimpses,
         req.params.id
     );
     res.json(post);
@@ -24,7 +24,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
     const post = await AppwriteConfig.database.createDocument(
         AppwriteConstants.databaseId,
-        AppwriteConstants.collectionIdPosts,
+        AppwriteConstants.collectionIdGlimpses,
         ID.unique(),
         req.body
     );

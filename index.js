@@ -1,15 +1,19 @@
 import express from 'express';
 import router from './routes/routes.js';
-import post_route from './routes/post_route.js'
+import post_routes from './routes/post_route.js'
 import cors from 'cors';
+import glimpse_routes from "./routes/glimpse_route.js";
+import user_routes from "./routes/user_routes.js";
 const app = express();
 app.use(cors());
 
 app.use(express.json());
 app.use(router)
-app.use('/posts', post_route);
+app.use('/users', user_routes);
+app.use('/posts', post_routes);
+app.use('/glimpses', glimpse_routes);
 
 
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
+app.listen(8000, () => {
+    console.log('Server is running on http://localhost:8000');
 });
