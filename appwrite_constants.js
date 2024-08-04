@@ -16,6 +16,7 @@ class AppwriteConstants {
     static collectionIdComments = '664a0b80001386b7c2bc';
     static collectionIdFans = '66a3dc860024f5bd721b';
     static collectionIdFollowers = '66a3e0820022a098b22a';
+
     static collectionIdMessages = '6673837a0022ba3c758e';
     static collectionIdChats = '668cd151001a49ed0814';
     static collectionIdGlimpses = '66907b650030b3dc12ed';
